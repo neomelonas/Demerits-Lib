@@ -47,6 +47,8 @@
   <ItemGroup>
     <Compile Include="Comments.cs" />
     <Compile Include="DataServices.cs" />
+    <Compile Include="Demerits.cs" />
+    <Compile Include="Detention.cs" />
     <Compile Include="DUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

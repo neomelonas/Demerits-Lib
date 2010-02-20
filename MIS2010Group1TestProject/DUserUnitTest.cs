@@ -65,13 +65,16 @@ namespace MIS2010Group1TestProject
         [TestMethod]
         public void UserListTestMethod()
         {
-            const string expectedNumberOfRows = "3";
+            const int expectedNumberOfRows = 3;
+            const string expectedFirstResult = "3";
             string role = "Teacher";
 
             DataSet dataset = DUser.GetUserList(role);
-            string numberOfRows = dataset.Tables[0].Rows[0]["userID"].ToString();
-
+            int numberOfRows = dataset.Tables[0].Rows.Count;
             Assert.IsTrue(numberOfRows == expectedNumberOfRows, "Actual results not what was expected.");
+
+            string firstResult = dataset.Tables[0].Rows[0]["userID"].ToString();
+            Assert.AreEqual(expectedFirstResult, firstResult, "Actual results not what was expected.");
         }
     }
 }
