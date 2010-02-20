@@ -18,11 +18,8 @@ namespace MIS2010Group1ClassLibrary
             SqlCommand command = new SqlCommand("procUserList", connection);
             command.CommandType = CommandType.StoredProcedure;
 
-            //Parameter timez
-            SqlParameter parameter = new SqlParameter("@role", SqlDbType.VarChar, 10);
-            parameter.Direction = ParameterDirection.Input;
-            parameter.Value = role;
-            command.Parameters.Add(parameter);
+            //Parameter time
+            command.Parameters.Add("@role", SqlDbType.VarChar, 10).Value = role;
 
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataSet dataSet = new DataSet();

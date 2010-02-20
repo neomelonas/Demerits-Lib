@@ -10,3 +10,10 @@ D:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1WebService\bin\MIS2
 D:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1WebService\bin\MIS2010Group1ClassLibrary.dll
 D:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1WebService\bin\MIS2010Group1ClassLibrary.pdb
 D:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1WebService\obj\Debug\MIS2010Group1WebService.pdb
+D:\Projects\School\MIS2010Group1Project\MIS2010Group1WebService\bin\MIS2010Group1WebService.dll
+D:\Projects\School\MIS2010Group1Project\MIS2010Group1WebService\bin\MIS2010Group1WebService.pdb
+D:\Projects\School\MIS2010Group1Project\MIS2010Group1WebService\bin\MIS2010Group1ClassLibrary.dll
+D:\Projects\School\MIS2010Group1Project\MIS2010Group1WebService\bin\MIS2010Group1ClassLibrary.pdb
+D:\Projects\School\MIS2010Group1Project\MIS2010Group1WebService\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\School\MIS2010Group1Project\MIS2010Group1WebService\obj\Debug\MIS2010Group1WebService.dll
+D:\Projects\School\MIS2010Group1Project\MIS2010Group1WebService\obj\Debug\MIS2010Group1WebService.pdb

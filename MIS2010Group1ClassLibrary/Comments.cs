@@ -9,7 +9,7 @@ namespace MIS2010Group1ClassLibrary
 {
     public class Comments
     {
-        public bool procAddNewComment(string description, int adID, int commentLink, out string error) {
+        public bool procAddNewComment(string description, int adID, int? commentLink, out string error) {
             bool success = false;
             error = "none";
 
@@ -26,15 +26,43 @@ namespace MIS2010Group1ClassLibrary
             if (commentLink != null) {
                 command.Parameters.Add("@commentLink", SqlDbType.Int).Value = commentLink;
             }
+            
             SqlParameter parameter = new SqlParameter("@errorMessage", SqlDbType.VarChar, 100); 
             parameter.Direction = ParameterDirection.Output;
-            parameter.Value = error;
+            command.Parameters.Add(parameter);
+
+            parameter = new SqlParameter("@success", SqlDbType.Bit);
+            parameter.Direction = ParameterDirection.ReturnValue;
             command.Parameters.Add(parameter);
 
             command.ExecuteNonQuery();
 
+            success = Convert.ToBoolean(command.Parameters["@successfulUpdate"].Value);
+            error = Convert.ToString(command.Parameters["@errorMessage"].Value);
+
             connection.Close();
             return success;
+        }
+
+        public static DataSet GetComments(int? adID, int? userID)
+        {
+            //Establish DBconn
+            SqlConnection connection = DataServices.SetDatabaseConnection();
+
+            //What DLO to use
+            SqlCommand command = new SqlCommand("procGetComments", connection);
+            command.CommandType = CommandType.StoredProcedure;
+
+            command.Parameters.Add("@assignedDemeritID", SqlDbType.Int).Value = adID;
+            command.Parameters.Add("@userID", SqlDbType.Int).Value = userID;
+
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataSet dataSet = new DataSet();
+            adapter.Fill(dataSet);
+
+            connection.Close();
+
+            return dataSet;
         }
     }
 }
