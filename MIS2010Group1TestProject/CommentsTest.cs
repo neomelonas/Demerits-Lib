@@ -99,7 +99,7 @@ namespace MIS2010Group1TestProject
         ///A test for procAddNewComment
         ///</summary>
         [TestMethod()]
-        public void procAddNewCommentTest()
+        public void AddNewCommentTest()
         {
             string description = "This is a TEST comment.";
             int adID = 104;
@@ -109,12 +109,12 @@ namespace MIS2010Group1TestProject
             string errorExpected = "None";
             bool expected = true;
             bool actual;
-            actual = Comments.procAddNewComment(description, adID, commentLink, userID, out error);
+            actual = Comments.AddNewComment(description, adID, commentLink, userID, out error);
             Assert.AreEqual(errorExpected, error, "THERE WAS AN ERROR with Regular Comments");
             Assert.AreEqual(expected, actual, "Regular Comment test unsuccessful");
 
             commentLink = 1; // TODO: Initialize to an appropriate value
-            actual = Comments.procAddNewComment(description, adID, commentLink, userID, out error);
+            actual = Comments.AddNewComment(description, adID, commentLink, userID, out error);
             Assert.AreEqual(errorExpected, error, "THERE WAS AN ERROR with Linked Comments");
             Assert.AreEqual(expected, actual, "Linked Comment test unsuccessful");
         }

@@ -9,7 +9,7 @@ namespace MIS2010Group1ClassLibrary
 {
     public class Comments
     {
-        public static bool procAddNewComment(string description, int adID, int? commentLink, int userID, out string error) {
+        public static bool AddNewComment(string description, int assignedDemeritID, int? commentLink, int userID, out string error) {
             bool success = false;
             error = "none";
 
@@ -22,7 +22,7 @@ namespace MIS2010Group1ClassLibrary
 
             //Parameter timez
             command.Parameters.Add("@commentDesc", SqlDbType.Text).Value = description;
-            command.Parameters.Add("@assignedDemeritID", SqlDbType.Int).Value = adID;
+            command.Parameters.Add("@assignedDemeritID", SqlDbType.Int).Value = assignedDemeritID;
             command.Parameters.Add("@userID", SqlDbType.Int).Value = userID;
             if (commentLink != null) {
                 command.Parameters.Add("@commentLink", SqlDbType.Int).Value = commentLink;
