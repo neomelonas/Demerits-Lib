@@ -17,3 +17,10 @@ D:\Projects\School\MIS2010Group1Project\MIS2010Group1WebService\bin\MIS2010Group
 D:\Projects\School\MIS2010Group1Project\MIS2010Group1WebService\obj\Debug\ResolveAssemblyReference.cache
 D:\Projects\School\MIS2010Group1Project\MIS2010Group1WebService\obj\Debug\MIS2010Group1WebService.dll
 D:\Projects\School\MIS2010Group1Project\MIS2010Group1WebService\obj\Debug\MIS2010Group1WebService.pdb
+C:\Users\Daneer86\Demerits-Lib\MIS2010Group1WebService\bin\MIS2010Group1WebService.dll
+C:\Users\Daneer86\Demerits-Lib\MIS2010Group1WebService\bin\MIS2010Group1WebService.pdb
+C:\Users\Daneer86\Demerits-Lib\MIS2010Group1WebService\bin\MIS2010Group1ClassLibrary.dll
+C:\Users\Daneer86\Demerits-Lib\MIS2010Group1WebService\bin\MIS2010Group1ClassLibrary.pdb
+C:\Users\Daneer86\Demerits-Lib\MIS2010Group1WebService\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Daneer86\Demerits-Lib\MIS2010Group1WebService\obj\Debug\MIS2010Group1WebService.dll
+C:\Users\Daneer86\Demerits-Lib\MIS2010Group1WebService\obj\Debug\MIS2010Group1WebService.pdb

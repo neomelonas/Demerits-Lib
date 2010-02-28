@@ -73,8 +73,8 @@ namespace MIS2010Group1TestProject
         {
             int expected = 5; // TODO: Initialize to an appropriate value
             DataSet actual = Demerits.GetAllDemerits();
-            int actualRows = actual.Tables[0].Rows.Count;
-            Assert.AreEqual(expected, actual, "There are a new quantity of Demerits.  I would see this test changed!");
+            int actualRowCount = actual.Tables[0].Rows.Count;
+            Assert.AreEqual(expected, actualRowCount, "There are a new quantity of Demerits.  I would see this test changed!");
         }
 
         /// <summary>
@@ -149,17 +149,17 @@ namespace MIS2010Group1TestProject
         public void GetDemeritInformationTest()
         {
             int demeritID = 104;
-            int expected = 2;
+            int expected = 3;
             DataSet actual;
             actual = Demerits.GetDemeritInformation(demeritID);
-            int actualNumberOfRows = actual.Tables[0].Rows.Count;
-            Assert.AreEqual(expected, actualNumberOfRows, "There is a disconnect between the result sets.");
+            int actualRowCount = actual.Tables[0].Rows.Count;
+            Assert.AreEqual(expected, actualRowCount, "There is a disconnect between the result sets.");
 
             demeritID = 112;
             expected = 0;
             actual = Demerits.GetDemeritInformation(demeritID);
-            actualNumberOfRows = actual.Tables[0].Rows.Count;
-            Assert.AreEqual(expected, actualNumberOfRows, "There is a disconnect between the result sets.");
+            actualRowCount = actual.Tables[0].Rows.Count;
+            Assert.AreEqual(expected, actualRowCount, "There is a disconnect between the result sets.");
         }
 
         /// <summary>
@@ -169,7 +169,7 @@ namespace MIS2010Group1TestProject
         public void GetStudentDemeritListTest()
         {
             Nullable<int> userID = new Nullable<int>();
-            int expected = 7;
+            int expected = 11;
             DataSet actual;
             actual = Demerits.GetStudentDemeritList(userID);
             int actualRowCount = actual.Tables[0].Rows.Count;

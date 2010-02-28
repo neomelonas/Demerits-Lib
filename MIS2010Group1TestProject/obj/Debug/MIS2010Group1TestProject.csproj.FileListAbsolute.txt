@@ -19,3 +19,10 @@ F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1TestProject\bin\Deb
 F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1TestProject\obj\Debug\ResolveAssemblyReference.cache
 F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1TestProject\obj\Debug\MIS2010Group1TestProject.dll
 F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1TestProject\obj\Debug\MIS2010Group1TestProject.pdb
+C:\Users\Daneer86\Demerits-Lib\MIS2010Group1TestProject\bin\Debug\MIS2010Group1TestProject.dll
+C:\Users\Daneer86\Demerits-Lib\MIS2010Group1TestProject\bin\Debug\MIS2010Group1TestProject.pdb
+C:\Users\Daneer86\Demerits-Lib\MIS2010Group1TestProject\bin\Debug\MIS2010Group1ClassLibrary.dll
+C:\Users\Daneer86\Demerits-Lib\MIS2010Group1TestProject\bin\Debug\MIS2010Group1ClassLibrary.pdb
+C:\Users\Daneer86\Demerits-Lib\MIS2010Group1TestProject\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Daneer86\Demerits-Lib\MIS2010Group1TestProject\obj\Debug\MIS2010Group1TestProject.dll
+C:\Users\Daneer86\Demerits-Lib\MIS2010Group1TestProject\obj\Debug\MIS2010Group1TestProject.pdb
