@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="fc827f9d-d4db-4872-b53f-caf48750efc9" name="Daneer86@DANEER86-PC 2010-02-27 16:11:36" runUser="Daneer86-PC\Daneer86" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2006">
+  <TestRunConfiguration name="Default Run Configuration" id="2d8783ca-42d2-4a42-8061-98f60fbdd4a4">
+    <Deployment runDeploymentRoot="C:\Users\Daneer86\Demerits-Lib\TestResults\Daneer86_DANEER86-PC 2010-02-27 16_11_36">
+      <DeploymentItem filename="C:\Users\Daneer86\Demerits-Lib\MIS2010Group1ClassLibrary\bin\Debug\MIS2010Group1ClassLibrary.dll" />
+    </Deployment>
+    <Hosts skipUnhostableTests="false" />
+    <TestTypeSpecific />
+  </TestRunConfiguration>
+  <ResultSummary outcome="Failed">
+    <Counters total="9" executed="9" error="0" failed="9" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <Times creation="2010-02-27T16:11:36.4572354-05:00" queuing="2010-02-27T16:11:39.3093986-05:00" start="2010-02-27T16:11:39.6514181-05:00" finish="2010-02-27T16:11:56.0053535-05:00" />
+  <TestDefinitions>
+    <UnitTest name="AddNewCommentTest" storage="c:\users\daneer86\demerits-lib\mis2010group1testproject\bin\debug\mis2010group1testproject.dll" id="7ffb2040-37b0-034c-f592-c49170b7e5f6">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="fcb1941f-c958-46e9-baa0-57cecb54d219" />
+      <TestMethod codeBase="C:\Users\Daneer86\Demerits-Lib\MIS2010Group1TestProject\bin\Debug\MIS2010Group1TestProject.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MIS2010Group1TestProject.CommentsTest, MIS2010Group1TestProject" name="AddNewCommentTest" />
+    </UnitTest>
+    <UnitTest name="GetStudentDemeritListTest" storage="c:\users\daneer86\demerits-lib\mis2010group1testproject\bin\debug\mis2010group1testproject.dll" id="0592f909-c8f5-63a5-cd3a-765531dd86f2">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="4180083a-2968-4833-93dc-62c64223da8e" />
+      <TestMethod codeBase="C:\Users\Daneer86\Demerits-Lib\MIS2010Group1TestProject\bin\Debug\MIS2010Group1TestProject.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MIS2010Group1TestProject.DemeritsTest, MIS2010Group1TestProject" name="GetStudentDemeritListTest" />
+    </UnitTest>
+    <UnitTest name="GetAllDemeritsTest" storage="c:\users\daneer86\demerits-lib\mis2010group1testproject\bin\debug\mis2010group1testproject.dll" id="cee05554-effe-b319-ad4e-15f4137afa21">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="c451bfeb-1f6c-4af6-9cdb-b21bb4048b9b" />
+      <TestMethod codeBase="C:\Users\Daneer86\Demerits-Lib\MIS2010Group1TestProject\bin\Debug\MIS2010Group1TestProject.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MIS2010Group1TestProject.DemeritsTest, MIS2010Group1TestProject" name="GetAllDemeritsTest" />
+    </UnitTest>
+    <UnitTest name="GetStudentDetentionsTest" storage="c:\users\daneer86\demerits-lib\mis2010group1testproject\bin\debug\mis2010group1testproject.dll" id="24d576dc-8a50-23c7-03c8-f5f73a484117">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="b2e6996a-b1a1-4a15-8111-8aef7c1f9a07" />
+      <TestMethod codeBase="C:\Users\Daneer86\Demerits-Lib\MIS2010Group1TestProject\bin\Debug\MIS2010Group1TestProject.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MIS2010Group1TestProject.DetentionTest, MIS2010Group1TestProject" name="GetStudentDetentionsTest" />
+    </UnitTest>
+    <UnitTest name="ADtoDemeritListTest" storage="c:\users\daneer86\demerits-lib\mis2010group1testproject\bin\debug\mis2010group1testproject.dll" id="f4015640-96d6-f607-efa6-6e523d41cc75">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="fe23aa2a-4bee-48af-ad79-d702d37a7f4f" />
+      <TestMethod codeBase="C:\Users\Daneer86\Demerits-Lib\MIS2010Group1TestProject\bin\Debug\MIS2010Group1TestProject.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MIS2010Group1TestProject.DemeritsTest, MIS2010Group1TestProject" name="ADtoDemeritListTest" />
+    </UnitTest>
+    <UnitTest name="GetCommentsTest" storage="c:\users\daneer86\demerits-lib\mis2010group1testproject\bin\debug\mis2010group1testproject.dll" id="5a3eb2ec-6880-570c-f73e-2800fc1137c2">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="8b36ed65-4664-46fb-b554-b765476a04be" />
+      <TestMethod codeBase="C:\Users\Daneer86\Demerits-Lib\MIS2010Group1TestProject\bin\Debug\MIS2010Group1TestProject.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MIS2010Group1TestProject.CommentsTest, MIS2010Group1TestProject" name="GetCommentsTest" />
+    </UnitTest>
+    <UnitTest name="AddAssignedDemeritTest" storage="c:\users\daneer86\demerits-lib\mis2010group1testproject\bin\debug\mis2010group1testproject.dll" id="5de30e64-9c83-a106-93ef-9020a92d4009">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="4b4ad5f6-9d20-4ea4-ba2b-ab192eb4850c" />
+      <TestMethod codeBase="C:\Users\Daneer86\Demerits-Lib\MIS2010Group1TestProject\bin\Debug\MIS2010Group1TestProject.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MIS2010Group1TestProject.DemeritsTest, MIS2010Group1TestProject" name="AddAssignedDemeritTest" />
+    </UnitTest>
+    <UnitTest name="UserListTestMethod" storage="c:\users\daneer86\demerits-lib\mis2010group1testproject\bin\debug\mis2010group1testproject.dll" id="4b75c757-6d4b-415f-83ca-4ead3705f6ae">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="5b36c483-47bb-4012-a4c5-61bbe174cfc0" />
+      <TestMethod codeBase="C:\Users\Daneer86\Demerits-Lib\MIS2010Group1TestProject\bin\Debug\MIS2010Group1TestProject.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MIS2010Group1TestProject.DUserUnitTest, MIS2010Group1TestProject" name="UserListTestMethod" />
+    </UnitTest>
+    <UnitTest name="GetDemeritInformationTest" storage="c:\users\daneer86\demerits-lib\mis2010group1testproject\bin\debug\mis2010group1testproject.dll" id="5661caba-e422-70b6-44c9-0c71c643bf89">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="7d392f6a-6c3e-4ef6-8502-cc92b0f82748" />
+      <TestMethod codeBase="C:\Users\Daneer86\Demerits-Lib\MIS2010Group1TestProject\bin\Debug\MIS2010Group1TestProject.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MIS2010Group1TestProject.DemeritsTest, MIS2010Group1TestProject" name="GetDemeritInformationTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="5a3eb2ec-6880-570c-f73e-2800fc1137c2" executionId="8b36ed65-4664-46fb-b554-b765476a04be" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7ffb2040-37b0-034c-f592-c49170b7e5f6" executionId="fcb1941f-c958-46e9-baa0-57cecb54d219" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cee05554-effe-b319-ad4e-15f4137afa21" executionId="c451bfeb-1f6c-4af6-9cdb-b21bb4048b9b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5de30e64-9c83-a106-93ef-9020a92d4009" executionId="4b4ad5f6-9d20-4ea4-ba2b-ab192eb4850c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f4015640-96d6-f607-efa6-6e523d41cc75" executionId="fe23aa2a-4bee-48af-ad79-d702d37a7f4f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5661caba-e422-70b6-44c9-0c71c643bf89" executionId="7d392f6a-6c3e-4ef6-8502-cc92b0f82748" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0592f909-c8f5-63a5-cd3a-765531dd86f2" executionId="4180083a-2968-4833-93dc-62c64223da8e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="24d576dc-8a50-23c7-03c8-f5f73a484117" executionId="b2e6996a-b1a1-4a15-8111-8aef7c1f9a07" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4b75c757-6d4b-415f-83ca-4ead3705f6ae" executionId="5b36c483-47bb-4012-a4c5-61bbe174cfc0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="8b36ed65-4664-46fb-b554-b765476a04be" testId="5a3eb2ec-6880-570c-f73e-2800fc1137c2" testName="GetCommentsTest" computerName="DANEER86-PC" duration="00:00:14.9898910" startTime="2010-02-27T16:11:39.8634302-05:00" endTime="2010-02-27T16:11:55.7033362-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method MIS2010Group1TestProject.CommentsTest.GetCommentsTest threw exception:  System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified).</Message>
+          <StackTrace>    at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at MIS2010Group1ClassLibrary.DataServices.SetDatabaseConnection() in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1ClassLibrary\DataServices.cs:line 19
+   at MIS2010Group1ClassLibrary.Comments.GetComments(Nullable`1 adID, Nullable`1 userID) in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1ClassLibrary\Comments.cs:line 51
+   at MIS2010Group1TestProject.CommentsTest.GetCommentsTest() in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1TestProject\CommentsTest.cs:line 78
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="fcb1941f-c958-46e9-baa0-57cecb54d219" testId="7ffb2040-37b0-034c-f592-c49170b7e5f6" testName="AddNewCommentTest" computerName="DANEER86-PC" duration="00:00:00.0071862" startTime="2010-02-27T16:11:55.7253375-05:00" endTime="2010-02-27T16:11:55.7483388-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method MIS2010Group1TestProject.CommentsTest.AddNewCommentTest threw exception:  System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified).</Message>
+          <StackTrace>    at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at MIS2010Group1ClassLibrary.DataServices.SetDatabaseConnection() in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1ClassLibrary\DataServices.cs:line 19
+   at MIS2010Group1ClassLibrary.Comments.AddNewComment(String description, Int32 assignedDemeritID, Nullable`1 commentLink, Int32 userID, String&amp; error) in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1ClassLibrary\Comments.cs:line 17
+   at MIS2010Group1TestProject.CommentsTest.AddNewCommentTest() in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1TestProject\CommentsTest.cs:line 112
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c451bfeb-1f6c-4af6-9cdb-b21bb4048b9b" testId="cee05554-effe-b319-ad4e-15f4137afa21" testName="GetAllDemeritsTest" computerName="DANEER86-PC" duration="00:00:00.0157227" startTime="2010-02-27T16:11:55.7513390-05:00" endTime="2010-02-27T16:11:55.7883411-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method MIS2010Group1TestProject.DemeritsTest.GetAllDemeritsTest threw exception:  System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified).</Message>
+          <StackTrace>    at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at MIS2010Group1ClassLibrary.DataServices.SetDatabaseConnection() in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1ClassLibrary\DataServices.cs:line 19
+   at MIS2010Group1ClassLibrary.Demerits.GetAllDemerits() in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1ClassLibrary\Demerits.cs:line 15
+   at MIS2010Group1TestProject.DemeritsTest.GetAllDemeritsTest() in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1TestProject\DemeritsTest.cs:line 75
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4b4ad5f6-9d20-4ea4-ba2b-ab192eb4850c" testId="5de30e64-9c83-a106-93ef-9020a92d4009" testName="AddAssignedDemeritTest" computerName="DANEER86-PC" duration="00:00:00.0044560" startTime="2010-02-27T16:11:55.7933414-05:00" endTime="2010-02-27T16:11:55.8073422-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method MIS2010Group1TestProject.DemeritsTest.AddAssignedDemeritTest threw exception:  System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified).</Message>
+          <StackTrace>    at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at MIS2010Group1ClassLibrary.DataServices.SetDatabaseConnection() in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1ClassLibrary\DataServices.cs:line 19
+   at MIS2010Group1ClassLibrary.Demerits.AddAssignedDemerit(Int32 teacherID, Int32 studentID, String&amp; error) in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1ClassLibrary\Demerits.cs:line 36
+   at MIS2010Group1TestProject.DemeritsTest.AddAssignedDemeritTest() in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1TestProject\DemeritsTest.cs:line 92
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="fe23aa2a-4bee-48af-ad79-d702d37a7f4f" testId="f4015640-96d6-f607-efa6-6e523d41cc75" testName="ADtoDemeritListTest" computerName="DANEER86-PC" duration="00:00:00.0053710" startTime="2010-02-27T16:11:55.8123425-05:00" endTime="2010-02-27T16:11:55.8273433-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method MIS2010Group1TestProject.DemeritsTest.ADtoDemeritListTest threw exception:  System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified).</Message>
+          <StackTrace>    at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at MIS2010Group1ClassLibrary.DataServices.SetDatabaseConnection() in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1ClassLibrary\DataServices.cs:line 19
+   at MIS2010Group1ClassLibrary.Demerits.ADtoDemeritList(Int32 adID, Int32 demeritID, String&amp; error) in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1ClassLibrary\Demerits.cs:line 68
+   at MIS2010Group1TestProject.DemeritsTest.ADtoDemeritListTest() in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1TestProject\DemeritsTest.cs:line 124
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7d392f6a-6c3e-4ef6-8502-cc92b0f82748" testId="5661caba-e422-70b6-44c9-0c71c643bf89" testName="GetDemeritInformationTest" computerName="DANEER86-PC" duration="00:00:00.0041077" startTime="2010-02-27T16:11:55.8353438-05:00" endTime="2010-02-27T16:11:55.8443443-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method MIS2010Group1TestProject.DemeritsTest.GetDemeritInformationTest threw exception:  System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified).</Message>
+          <StackTrace>    at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at MIS2010Group1ClassLibrary.DataServices.SetDatabaseConnection() in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1ClassLibrary\DataServices.cs:line 19
+   at MIS2010Group1ClassLibrary.Demerits.GetDemeritInformation(Int32 demeritID) in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1ClassLibrary\Demerits.cs:line 97
+   at MIS2010Group1TestProject.DemeritsTest.GetDemeritInformationTest() in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1TestProject\DemeritsTest.cs:line 154
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4180083a-2968-4833-93dc-62c64223da8e" testId="0592f909-c8f5-63a5-cd3a-765531dd86f2" testName="GetStudentDemeritListTest" computerName="DANEER86-PC" duration="00:00:00.0055184" startTime="2010-02-27T16:11:55.8473445-05:00" endTime="2010-02-27T16:11:55.8603452-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method MIS2010Group1TestProject.DemeritsTest.GetStudentDemeritListTest threw exception:  System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified).</Message>
+          <StackTrace>    at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at MIS2010Group1ClassLibrary.DataServices.SetDatabaseConnection() in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1ClassLibrary\DataServices.cs:line 19
+   at MIS2010Group1ClassLibrary.Demerits.GetStudentDemeritList(Nullable`1 userID) in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1ClassLibrary\Demerits.cs:line 116
+   at MIS2010Group1TestProject.DemeritsTest.GetStudentDemeritListTest() in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1TestProject\DemeritsTest.cs:line 174
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b2e6996a-b1a1-4a15-8111-8aef7c1f9a07" testId="24d576dc-8a50-23c7-03c8-f5f73a484117" testName="GetStudentDetentionsTest" computerName="DANEER86-PC" duration="00:00:00.0055569" startTime="2010-02-27T16:11:55.8693457-05:00" endTime="2010-02-27T16:11:55.8803464-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method MIS2010Group1TestProject.DetentionTest.GetStudentDetentionsTest threw exception:  System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified).</Message>
+          <StackTrace>    at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at MIS2010Group1ClassLibrary.DataServices.SetDatabaseConnection() in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1ClassLibrary\DataServices.cs:line 19
+   at MIS2010Group1ClassLibrary.Detention.GetStudentDetentions(Nullable`1 studentID, Boolean servedStatus) in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1ClassLibrary\Detention.cs:line 15
+   at MIS2010Group1TestProject.DetentionTest.GetStudentDetentionsTest() in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1TestProject\DetentionTest.cs:line 79
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5b36c483-47bb-4012-a4c5-61bbe174cfc0" testId="4b75c757-6d4b-415f-83ca-4ead3705f6ae" testName="UserListTestMethod" computerName="DANEER86-PC" duration="00:00:00.0044104" startTime="2010-02-27T16:11:55.8843466-05:00" endTime="2010-02-27T16:11:55.8983474-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method MIS2010Group1TestProject.DUserUnitTest.UserListTestMethod threw exception:  System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified).</Message>
+          <StackTrace>    at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at MIS2010Group1ClassLibrary.DataServices.SetDatabaseConnection() in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1ClassLibrary\DataServices.cs:line 19
+   at MIS2010Group1ClassLibrary.DUser.GetUserList(String role) in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1ClassLibrary\DUser.cs:line 15
+   at MIS2010Group1TestProject.DUserUnitTest.UserListTestMethod() in F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1TestProject\DUserUnitTest.cs:line 72
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

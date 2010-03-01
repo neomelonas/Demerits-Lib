@@ -19,7 +19,7 @@ namespace MIS2010Group1ClassLibrary
             command.CommandType = CommandType.StoredProcedure;
 
             //Parameter time
-            command.Parameters.Add("@role", SqlDbType.VarChar, 10).Value = role;
+            command.Parameters.Add("@role", SqlDbType.VarChar, 20).Value = role;
 
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataSet dataSet = new DataSet();

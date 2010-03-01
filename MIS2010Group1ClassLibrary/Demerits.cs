@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MIS2010Group1ClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,7 @@ namespace MIS2010Group1ClassLibrary
             SqlConnection connection = DataServices.SetDatabaseConnection();
 
             //What DLO to use
-            SqlCommand command = new SqlCommand("fnGetAllDemerits", connection);
+            SqlCommand command = new SqlCommand("procGetAllDemerits", connection);
             command.CommandType = CommandType.StoredProcedure;
 
             SqlDataAdapter adapter = new SqlDataAdapter(command);
@@ -68,7 +69,7 @@ namespace MIS2010Group1ClassLibrary
             SqlConnection connection = DataServices.SetDatabaseConnection();
 
             //What DLO to use
-            SqlCommand command = new SqlCommand("procAddAssignedDemerit", connection);
+            SqlCommand command = new SqlCommand("procADtoDemeritList", connection);
             command.CommandType = CommandType.StoredProcedure;
 
             command.Parameters.Add("@assignedDemeritID", SqlDbType.Int).Value = adID;
@@ -97,7 +98,7 @@ namespace MIS2010Group1ClassLibrary
             SqlConnection connection = DataServices.SetDatabaseConnection();
 
             //What DLO to use
-            SqlCommand command = new SqlCommand("fnGetDemeritInformation", connection);
+            SqlCommand command = new SqlCommand("procGetDemeritInformation", connection);
             command.CommandType = CommandType.StoredProcedure;
 
             command.Parameters.Add("@demeritID", SqlDbType.Int).Value = demeritID;
@@ -116,7 +117,7 @@ namespace MIS2010Group1ClassLibrary
             SqlConnection connection = DataServices.SetDatabaseConnection();
 
             //What DLO to use
-            SqlCommand command = new SqlCommand("fnGetDemeritInformation", connection);
+            SqlCommand command = new SqlCommand("procGetStudentDemeritList", connection);
             command.CommandType = CommandType.StoredProcedure;
 
             command.Parameters.Add("@userID", SqlDbType.Int).Value = userID;

@@ -73,26 +73,30 @@ namespace MIS2010Group1TestProject
         {
             Nullable<int> adID = new Nullable<int>(); // TODO: Initialize to an appropriate value
             Nullable<int> userID = new Nullable<int>(); // TODO: Initialize to an appropriate value
-            int expected = 5; // TODO: Initialize to an appropriate value
+            int expected = 6; // TODO: Initialize to an appropriate value
             DataSet actual;
             actual = Comments.GetComments(adID, userID);
-            Assert.AreEqual(expected, actual, "Error! ERROR! OH GOD WHY???");
+            int actualRowCount = actual.Tables[0].Rows.Count; //Previously the error was reading as if this was a dataset
+            Assert.AreEqual(expected, actualRowCount, "Error! ERROR! OH GOD WHY???");
 
             expected = 1;
-            adID = 101;
+            adID = 107;
             actual = Comments.GetComments(adID, userID);
-            Assert.AreEqual(expected, actual, "Error with AssignedDemeritID specified.");
+            actualRowCount = actual.Tables[0].Rows.Count;
+            Assert.AreEqual(expected, actualRowCount, "Error with AssignedDemeritID specified.");
 
             expected = 1;
             userID = 1;
             actual = Comments.GetComments(adID, userID);
-            Assert.AreEqual(expected, actual, "Error with userID specified.");
+            actualRowCount = actual.Tables[0].Rows.Count;
+            Assert.AreEqual(expected, actualRowCount, "Error with userID specified.");
 
 
-            adID = 101;
+            adID = 104;
             userID = 1;
             actual = Comments.GetComments(adID, userID);
-            Assert.AreEqual(expected, actual, "Error with both AssignedDemeritID and userID specified.");
+            actualRowCount = actual.Tables[0].Rows.Count;
+            Assert.AreEqual(expected, actualRowCount, "Error with both AssignedDemeritID and userID specified.");
         }
 
         /// <summary>

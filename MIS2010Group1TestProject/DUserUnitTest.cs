@@ -70,8 +70,8 @@ namespace MIS2010Group1TestProject
             string role = "Teacher";
 
             DataSet dataset = DUser.GetUserList(role);
-            int numberOfRows = dataset.Tables[0].Rows.Count;
-            Assert.IsTrue(numberOfRows == expectedNumberOfRows, "Actual results not what was expected.");
+            int actualRowCount = dataset.Tables[0].Rows.Count;
+            Assert.IsTrue(actualRowCount == expectedNumberOfRows, "Actual results not what was expected.");
 
             string firstResult = dataset.Tables[0].Rows[0]["userID"].ToString();
             Assert.AreEqual(expectedFirstResult, firstResult, "Actual results not what was expected.");
