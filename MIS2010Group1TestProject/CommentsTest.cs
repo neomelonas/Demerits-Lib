@@ -108,7 +108,7 @@ namespace MIS2010Group1TestProject
         {
             string description = "This is a TEST comment.";
             int adID = 104;
-            Nullable<int> commentLink = null;
+            int? commentLink = null;
             int userID = 1;
             string error = string.Empty;
             string errorExpected = "None";
@@ -123,5 +123,10 @@ namespace MIS2010Group1TestProject
             Assert.AreEqual(errorExpected, error, "THERE WAS AN ERROR with Linked Comments");
             Assert.AreEqual(expected, actual, "Linked Comment test unsuccessful");
         }
+        //[TestCleanup()]
+        //public void CommentsTestCleanup()
+        //{
+        //    Comments.CommentsTestCleanup();
+        //}
     }
 }

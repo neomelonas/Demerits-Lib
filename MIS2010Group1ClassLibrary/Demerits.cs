@@ -157,5 +157,53 @@ namespace MIS2010Group1ClassLibrary
 
             return success;
         }
+
+        public static bool ADTestCleanup()
+        {
+            bool success;
+
+            //Establish DBconn
+            SqlConnection connection = DataServices.SetDatabaseConnection();
+
+            //What DLO to use
+            SqlCommand command = new SqlCommand("procADTestCleanup", connection);
+            command.CommandType = CommandType.StoredProcedure;
+
+            SqlParameter parameter = new SqlParameter("@success", SqlDbType.Bit);
+            parameter.Direction = ParameterDirection.ReturnValue;
+            command.Parameters.Add(parameter);
+            command.ExecuteNonQuery();
+
+            success = Convert.ToBoolean(command.Parameters["@success"].Value);
+
+            connection.Close();
+
+            return success;
+        }
+        public static bool DeleteFromDemeritList(int demeritID, int assignedDemeritID)
+        {
+            bool success;
+
+            //Establish DBconn
+            SqlConnection connection = DataServices.SetDatabaseConnection();
+
+            //What DLO to use
+            SqlCommand command = new SqlCommand("procDeleteFromDemeritList", connection);
+            command.CommandType = CommandType.StoredProcedure;
+
+            command.Parameters.Add("@demeritID", SqlDbType.Int).Value = demeritID;
+            command.Parameters.Add("@assignedDemeritID", SqlDbType.Int).Value = assignedDemeritID;
+
+            SqlParameter parameter = new SqlParameter("@success", SqlDbType.Bit);
+            parameter.Direction = ParameterDirection.ReturnValue;
+            command.Parameters.Add(parameter);
+            command.ExecuteNonQuery();
+
+            success = Convert.ToBoolean(command.Parameters["@success"].Value);
+
+            connection.Close();
+
+            return success;
+        }
     }
 }

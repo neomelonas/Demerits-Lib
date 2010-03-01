@@ -63,5 +63,27 @@ namespace MIS2010Group1ClassLibrary
 
             return dataSet;
         }
+        public static bool CommentsTestCleanup()
+        {
+            bool success;
+
+            //Establish DBconn
+            SqlConnection connection = DataServices.SetDatabaseConnection();
+
+            //What DLO to use
+            SqlCommand command = new SqlCommand("procCommentsTestCleanup", connection);
+            command.CommandType = CommandType.StoredProcedure;
+
+            SqlParameter parameter = new SqlParameter("@success", SqlDbType.Bit);
+            parameter.Direction = ParameterDirection.ReturnValue;
+            command.Parameters.Add(parameter);
+            command.ExecuteNonQuery();
+
+            success = Convert.ToBoolean(command.Parameters["@success"].Value);
+
+            connection.Close();
+
+            return success;
+        }
     }
 }

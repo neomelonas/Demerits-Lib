@@ -85,7 +85,7 @@ namespace MIS2010Group1TestProject
         {
             int teacherID = 10;
             int studentID = 1;
-            string error = "None";
+            string error = null;
             string errorExpected = "None";
             bool expected = true;
             bool actual;
@@ -93,16 +93,9 @@ namespace MIS2010Group1TestProject
             Assert.AreEqual(errorExpected, error, "Insert failed.");
             Assert.AreEqual(expected, actual, "Insert failed.");
 
-            teacherID = 10;
-            studentID = 1;
-            expected = false;
-            errorExpected = "Primary key violation";
-            actual = Demerits.AddAssignedDemerit(teacherID, studentID, out error);
-            Assert.AreEqual(errorExpected, error, "Insert failed.");
-            Assert.AreEqual(expected, actual, "Insert succeeded with PK violation.");
-
             teacherID = 1;
             studentID = 1;
+            expected = false;
             errorExpected = "Foreign key violation: Teacher does not exist";
             actual = Demerits.AddAssignedDemerit(teacherID, studentID, out error);
             Assert.AreEqual(errorExpected, error, "Error was something different! Or, it worked!");
@@ -110,6 +103,7 @@ namespace MIS2010Group1TestProject
 
             teacherID = 10;
             studentID = 10;
+            expected = false;
             errorExpected = "Foreign key violation: Student does not exist";
             actual = Demerits.AddAssignedDemerit(teacherID, studentID, out error);
             Assert.AreEqual(errorExpected, error, "Error was something different! Or, it worked!");
@@ -124,13 +118,14 @@ namespace MIS2010Group1TestProject
         {
             int adID = 104;
             int demeritID = 3;
-            string error = "None";
-            string errorExpected = "None";
-            bool expected = true;
+            string error = null;
+            string errorExpected = "Primary key violation";
+            bool expected = false;
             bool actual;
             actual = Demerits.ADtoDemeritList(adID, demeritID, out error);
             Assert.AreEqual(errorExpected, error, "Error happened, but was not supposed to...");
-            Assert.AreEqual(expected, actual, "Something did not work.");
+            Assert.AreEqual(expected, actual, "If you see this, there is a bigger error afoot.");
+            
 
             adID = 129;
             demeritID = 3;
@@ -156,11 +151,11 @@ namespace MIS2010Group1TestProject
         public void GetDemeritInformationTest()
         {
             int demeritID = 104;
-            int expected = 3;
+            int expected = 1;
             DataSet actual;
             actual = Demerits.GetDemeritInformation(demeritID);
             int actualRowCount = actual.Tables[0].Rows.Count;
-            Assert.AreEqual(expected, actualRowCount, "There is a disconnect between the result sets.");
+            Assert.IsTrue(expected <= actualRowCount, "There is a disconnect between the result sets.");
 
             demeritID = 112;
             expected = 0;
@@ -176,11 +171,11 @@ namespace MIS2010Group1TestProject
         public void GetStudentDemeritListTest()
         {
             Nullable<int> userID = new Nullable<int>();
-            int expected = 10;
+            int expected = 6;
             DataSet actual;
             actual = Demerits.GetStudentDemeritList(userID);
             int actualRowCount = actual.Tables[0].Rows.Count;
-            Assert.IsTrue(expected <= actualRowCount, "There are is a really odd disconnect here.");
+            Assert.IsTrue(expected <= actualRowCount, "There are are fewer Demerits than expected.");
 
             userID = 7;
             expected = 2;
@@ -190,9 +185,12 @@ namespace MIS2010Group1TestProject
         }
 
         [TestCleanup()]
-        public void MyTestCleanup()
+        public void DemeritsTestCleanup()
         {
-            
+            int demeritID = 3;
+            int adID = 104;
+            Demerits.DeleteFromDemeritList(demeritID, adID);
+            Demerits.ADTestCleanup();
         }
     }
 }
