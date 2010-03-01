@@ -78,7 +78,7 @@ namespace MIS2010Group1TestProject
             DataSet actual;
             actual = Detention.GetStudentDetentions(studentID, servedStatus);
             actualNumberOfRows = actual.Tables[0].Rows.Count;
-            Assert.AreEqual(expected, actualNumberOfRows, "There are a different number of rows.");
+            Assert.IsTrue(expected <= actualNumberOfRows, "There are more rows than expected.");
 
             studentID = 7;
             servedStatus = false;

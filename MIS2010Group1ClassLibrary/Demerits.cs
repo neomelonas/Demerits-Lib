@@ -129,5 +129,33 @@ namespace MIS2010Group1ClassLibrary
             connection.Close();
             return dataSet;
         }
+
+        public static bool RemoveAssignedDemerit(int? teacherID, int? studentID, int? assignedDemeritID)
+        {
+            bool success;
+
+            //Establish DBconn
+            SqlConnection connection = DataServices.SetDatabaseConnection();
+
+            //What DLO to use
+            SqlCommand command = new SqlCommand("procDeleteAssignedDemerit", connection);
+            command.CommandType = CommandType.StoredProcedure;
+
+            command.Parameters.Add("@teacherID", SqlDbType.Int).Value = teacherID;
+            command.Parameters.Add("@studentID", SqlDbType.Int).Value = studentID;
+            command.Parameters.Add("@assignedDemeritID", SqlDbType.Int).Value = assignedDemeritID;
+
+            SqlParameter parameter = new SqlParameter("@success", SqlDbType.Bit);
+            parameter.Direction = ParameterDirection.ReturnValue;
+            command.Parameters.Add(parameter);
+
+            command.ExecuteNonQuery();
+
+            success = Convert.ToBoolean(command.Parameters["@success"].Value);
+
+            connection.Close();
+
+            return success;
+        }
     }
 }

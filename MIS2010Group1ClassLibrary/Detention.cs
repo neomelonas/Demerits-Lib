@@ -15,7 +15,7 @@ namespace MIS2010Group1ClassLibrary
             SqlConnection connection = DataServices.SetDatabaseConnection();
 
             //What DLO to use
-            SqlCommand command = new SqlCommand("fnGetStudentDetentions", connection);
+            SqlCommand command = new SqlCommand("procGetStudentDetentions", connection);
             command.CommandType = CommandType.StoredProcedure;
 
             command.Parameters.Add("@studentID", SqlDbType.Int).Value = studentID;

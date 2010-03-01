@@ -5,13 +5,6 @@ D:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1TestProject\bin\Deb
 D:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1TestProject\bin\Debug\MIS2010Group1ClassLibrary.pdb
 D:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1TestProject\obj\Debug\MIS2010Group1TestProject.dll
 D:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1TestProject\obj\Debug\MIS2010Group1TestProject.pdb
-D:\Projects\School\MIS2010Group1Project\MIS2010Group1TestProject\bin\Debug\MIS2010Group1TestProject.dll
-D:\Projects\School\MIS2010Group1Project\MIS2010Group1TestProject\bin\Debug\MIS2010Group1TestProject.pdb
-D:\Projects\School\MIS2010Group1Project\MIS2010Group1TestProject\bin\Debug\MIS2010Group1ClassLibrary.dll
-D:\Projects\School\MIS2010Group1Project\MIS2010Group1TestProject\bin\Debug\MIS2010Group1ClassLibrary.pdb
-D:\Projects\School\MIS2010Group1Project\MIS2010Group1TestProject\obj\Debug\ResolveAssemblyReference.cache
-D:\Projects\School\MIS2010Group1Project\MIS2010Group1TestProject\obj\Debug\MIS2010Group1TestProject.dll
-D:\Projects\School\MIS2010Group1Project\MIS2010Group1TestProject\obj\Debug\MIS2010Group1TestProject.pdb
 F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1TestProject\bin\Debug\MIS2010Group1TestProject.dll
 F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1TestProject\bin\Debug\MIS2010Group1TestProject.pdb
 F:\Group1Stuff\WebServices\MIS2010Group1Project\MIS2010Group1TestProject\bin\Debug\MIS2010Group1ClassLibrary.dll
@@ -26,3 +19,10 @@ C:\Users\Daneer86\Demerits-Lib\MIS2010Group1TestProject\bin\Debug\MIS2010Group1C
 C:\Users\Daneer86\Demerits-Lib\MIS2010Group1TestProject\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Daneer86\Demerits-Lib\MIS2010Group1TestProject\obj\Debug\MIS2010Group1TestProject.dll
 C:\Users\Daneer86\Demerits-Lib\MIS2010Group1TestProject\obj\Debug\MIS2010Group1TestProject.pdb
+D:\Projects\School\MIS2010Group1Project\MIS2010Group1TestProject\bin\Debug\MIS2010Group1TestProject.dll
+D:\Projects\School\MIS2010Group1Project\MIS2010Group1TestProject\bin\Debug\MIS2010Group1TestProject.pdb
+D:\Projects\School\MIS2010Group1Project\MIS2010Group1TestProject\bin\Debug\MIS2010Group1ClassLibrary.dll
+D:\Projects\School\MIS2010Group1Project\MIS2010Group1TestProject\bin\Debug\MIS2010Group1ClassLibrary.pdb
+D:\Projects\School\MIS2010Group1Project\MIS2010Group1TestProject\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\School\MIS2010Group1Project\MIS2010Group1TestProject\obj\Debug\MIS2010Group1TestProject.dll
+D:\Projects\School\MIS2010Group1Project\MIS2010Group1TestProject\obj\Debug\MIS2010Group1TestProject.pdb

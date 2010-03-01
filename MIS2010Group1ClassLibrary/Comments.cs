@@ -11,7 +11,7 @@ namespace MIS2010Group1ClassLibrary
     {
         public static bool AddNewComment(string description, int assignedDemeritID, int? commentLink, int userID, out string error) {
             bool success = false;
-            error = "none";
+            error = "None";
 
             //Establish DBconn
             SqlConnection connection = DataServices.SetDatabaseConnection();
@@ -24,10 +24,8 @@ namespace MIS2010Group1ClassLibrary
             command.Parameters.Add("@commentDesc", SqlDbType.Text).Value = description;
             command.Parameters.Add("@assignedDemeritID", SqlDbType.Int).Value = assignedDemeritID;
             command.Parameters.Add("@userID", SqlDbType.Int).Value = userID;
-            if (commentLink != null) {
-                command.Parameters.Add("@commentLink", SqlDbType.Int).Value = commentLink;
-            }
-            
+            command.Parameters.Add("@commentLink", SqlDbType.Int).Value = commentLink;
+                        
             SqlParameter parameter = new SqlParameter("@errorMessage", SqlDbType.VarChar, 100); 
             parameter.Direction = ParameterDirection.Output;
             command.Parameters.Add(parameter);
@@ -38,7 +36,7 @@ namespace MIS2010Group1ClassLibrary
 
             command.ExecuteNonQuery();
 
-            success = Convert.ToBoolean(command.Parameters["@successfulUpdate"].Value);
+            success = Convert.ToBoolean(command.Parameters["@success"].Value);
             error = Convert.ToString(command.Parameters["@errorMessage"].Value);
 
             connection.Close();

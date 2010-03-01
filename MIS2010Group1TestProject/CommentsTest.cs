@@ -71,29 +71,30 @@ namespace MIS2010Group1TestProject
         [TestMethod()]
         public void GetCommentsTest()
         {
-            Nullable<int> adID = new Nullable<int>(); // TODO: Initialize to an appropriate value
-            Nullable<int> userID = new Nullable<int>(); // TODO: Initialize to an appropriate value
-            int expected = 6; // TODO: Initialize to an appropriate value
+            Nullable<int> adID = new Nullable<int>();
+            Nullable<int> userID = new Nullable<int>();
+            int expected = 5;
             DataSet actual;
             actual = Comments.GetComments(adID, userID);
             int actualRowCount = actual.Tables[0].Rows.Count; //Previously the error was reading as if this was a dataset
-            Assert.AreEqual(expected, actualRowCount, "Error! ERROR! OH GOD WHY???");
+            Assert.IsTrue(expected <= actualRowCount, "Error! ERROR! OH GOD WHY???");
 
-            expected = 1;
-            adID = 107;
+            expected = 2;
+            adID = 103;
             actual = Comments.GetComments(adID, userID);
             actualRowCount = actual.Tables[0].Rows.Count;
-            Assert.AreEqual(expected, actualRowCount, "Error with AssignedDemeritID specified.");
+            Assert.IsTrue(expected <= actualRowCount, "Error with AssignedDemeritID specified.");
 
             expected = 1;
+            adID = null;
             userID = 1;
             actual = Comments.GetComments(adID, userID);
             actualRowCount = actual.Tables[0].Rows.Count;
-            Assert.AreEqual(expected, actualRowCount, "Error with userID specified.");
+            Assert.IsTrue(expected <= actualRowCount, "Error with userID specified.");
 
-
-            adID = 104;
-            userID = 1;
+            expected = 1;
+            adID = 103;
+            userID = 4;
             actual = Comments.GetComments(adID, userID);
             actualRowCount = actual.Tables[0].Rows.Count;
             Assert.AreEqual(expected, actualRowCount, "Error with both AssignedDemeritID and userID specified.");
@@ -107,9 +108,9 @@ namespace MIS2010Group1TestProject
         {
             string description = "This is a TEST comment.";
             int adID = 104;
-            Nullable<int> commentLink = new Nullable<int>(); // TODO: Initialize to an appropriate value
+            Nullable<int> commentLink = null;
             int userID = 1;
-            string error = string.Empty; // TODO: Initialize to an appropriate value
+            string error = string.Empty;
             string errorExpected = "None";
             bool expected = true;
             bool actual;
@@ -117,7 +118,7 @@ namespace MIS2010Group1TestProject
             Assert.AreEqual(errorExpected, error, "THERE WAS AN ERROR with Regular Comments");
             Assert.AreEqual(expected, actual, "Regular Comment test unsuccessful");
 
-            commentLink = 1; // TODO: Initialize to an appropriate value
+            commentLink = 1;
             actual = Comments.AddNewComment(description, adID, commentLink, userID, out error);
             Assert.AreEqual(errorExpected, error, "THERE WAS AN ERROR with Linked Comments");
             Assert.AreEqual(expected, actual, "Linked Comment test unsuccessful");

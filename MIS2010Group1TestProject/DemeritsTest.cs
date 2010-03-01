@@ -93,20 +93,27 @@ namespace MIS2010Group1TestProject
             Assert.AreEqual(errorExpected, error, "Insert failed.");
             Assert.AreEqual(expected, actual, "Insert failed.");
 
+            teacherID = 10;
+            studentID = 1;
+            expected = false;
+            errorExpected = "Primary key violation";
+            actual = Demerits.AddAssignedDemerit(teacherID, studentID, out error);
+            Assert.AreEqual(errorExpected, error, "Insert failed.");
+            Assert.AreEqual(expected, actual, "Insert succeeded with PK violation.");
 
             teacherID = 1;
             studentID = 1;
             errorExpected = "Foreign key violation: Teacher does not exist";
             actual = Demerits.AddAssignedDemerit(teacherID, studentID, out error);
             Assert.AreEqual(errorExpected, error, "Error was something different! Or, it worked!");
-            Assert.AreEqual(expected, actual, "Insert succeeded.");
+            Assert.AreEqual(expected, actual, "Insert succeeded when Teacher was wrong.");
 
             teacherID = 10;
             studentID = 10;
             errorExpected = "Foreign key violation: Student does not exist";
             actual = Demerits.AddAssignedDemerit(teacherID, studentID, out error);
             Assert.AreEqual(errorExpected, error, "Error was something different! Or, it worked!");
-            Assert.AreEqual(expected, actual, "Insert succeeded.");
+            Assert.AreEqual(expected, actual, "Insert succeeded when student was wrong.");
         }
 
         /// <summary>
@@ -169,17 +176,23 @@ namespace MIS2010Group1TestProject
         public void GetStudentDemeritListTest()
         {
             Nullable<int> userID = new Nullable<int>();
-            int expected = 11;
+            int expected = 10;
             DataSet actual;
             actual = Demerits.GetStudentDemeritList(userID);
             int actualRowCount = actual.Tables[0].Rows.Count;
-            Assert.AreEqual(expected, actualRowCount, "There are is a really odd disconnect here.");
+            Assert.IsTrue(expected <= actualRowCount, "There are is a really odd disconnect here.");
 
             userID = 7;
             expected = 2;
             actual = Demerits.GetStudentDemeritList(userID);
             actualRowCount = actual.Tables[0].Rows.Count;
             Assert.AreEqual(expected, actualRowCount, "User #7 has more (or less) than 2 Demerits.");
+        }
+
+        [TestCleanup()]
+        public void MyTestCleanup()
+        {
+            
         }
     }
 }
