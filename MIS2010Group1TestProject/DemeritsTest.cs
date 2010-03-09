@@ -131,7 +131,7 @@ namespace MIS2010Group1TestProject
             adID = 129;
             demeritID = 3;
             expected = false;
-            errorExpected = "Foreign key violation: Assigned Demerit does not exist.";
+            errorExpected = "Foreign key violation: Assigned Demerit does not exist";
             actual = Demerits.ADtoDemeritList(adID, demeritID, out error);
             Assert.AreEqual(errorExpected, error, "Assigned Demerit Error did not happen, but was supposed to...");
             Assert.AreEqual(expected, actual, "Something worked.");
