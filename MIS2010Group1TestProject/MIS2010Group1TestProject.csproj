@@ -53,9 +53,6 @@
     <Compile Include="DUserUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AuthoringTests.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\MIS2010Group1ClassLibrary\MIS2010Group1ClassLibrary.csproj">
       <Project>{BF398729-D17A-4CBE-A8FF-A27C75111405}</Project>
       <Name>MIS2010Group1ClassLibrary</Name>

@@ -85,14 +85,14 @@ namespace MIS2010Group1TestProject
             expected = 1;
             actual = Detention.GetStudentDetentions(studentID, servedStatus);
             actualNumberOfRows = actual.Tables[0].Rows.Count;
-            Assert.AreEqual(expected, actualNumberOfRows, "There are a different number of rows.");
+            Assert.IsTrue(expected <= actualNumberOfRows, "There are a different number of rows.");
 
             studentID = 7;
             servedStatus = true;
             expected = 1;
             actual = Detention.GetStudentDetentions(studentID, servedStatus);
             actualNumberOfRows = actual.Tables[0].Rows.Count;
-            Assert.AreEqual(expected, actualNumberOfRows, "There are a different number of rows.");
+            Assert.IsTrue(expected <= actualNumberOfRows, "There are a different number of rows.");
         }
     }
 }

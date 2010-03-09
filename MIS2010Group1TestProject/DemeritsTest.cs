@@ -85,11 +85,12 @@ namespace MIS2010Group1TestProject
         {
             int teacherID = 10;
             int studentID = 1;
+            double weight = 0.5;
             string error = null;
             string errorExpected = "None";
             bool expected = true;
             bool actual;
-            actual = Demerits.AddAssignedDemerit(teacherID, studentID, out error);
+            actual = Demerits.AddAssignedDemerit(teacherID, studentID,weight, out error);
             Assert.AreEqual(errorExpected, error, "Insert failed.");
             Assert.AreEqual(expected, actual, "Insert failed.");
 
@@ -97,7 +98,7 @@ namespace MIS2010Group1TestProject
             studentID = 1;
             expected = false;
             errorExpected = "Foreign key violation: Teacher does not exist";
-            actual = Demerits.AddAssignedDemerit(teacherID, studentID, out error);
+            actual = Demerits.AddAssignedDemerit(teacherID, studentID,weight, out error);
             Assert.AreEqual(errorExpected, error, "Error was something different! Or, it worked!");
             Assert.AreEqual(expected, actual, "Insert succeeded when Teacher was wrong.");
 
@@ -105,7 +106,7 @@ namespace MIS2010Group1TestProject
             studentID = 10;
             expected = false;
             errorExpected = "Foreign key violation: Student does not exist";
-            actual = Demerits.AddAssignedDemerit(teacherID, studentID, out error);
+            actual = Demerits.AddAssignedDemerit(teacherID, studentID,weight, out error);
             Assert.AreEqual(errorExpected, error, "Error was something different! Or, it worked!");
             Assert.AreEqual(expected, actual, "Insert succeeded when student was wrong.");
         }
@@ -119,8 +120,8 @@ namespace MIS2010Group1TestProject
             int adID = 104;
             int demeritID = 3;
             string error = null;
-            string errorExpected = "Primary key violation";
-            bool expected = false;
+            string errorExpected = "None";// "Primary key violation";
+            bool expected = true;
             bool actual;
             actual = Demerits.ADtoDemeritList(adID, demeritID, out error);
             Assert.AreEqual(errorExpected, error, "Error happened, but was not supposed to...");

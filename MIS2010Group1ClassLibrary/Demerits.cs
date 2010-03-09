@@ -28,7 +28,7 @@ namespace MIS2010Group1ClassLibrary
             return dataSet;
         }
 
-        public static bool AddAssignedDemerit(int teacherID, int studentID, out string error)
+        public static bool AddAssignedDemerit(int teacherID, int studentID, double adWeight, out string error)
         {
             bool success = false;
             error = "none";
@@ -42,6 +42,7 @@ namespace MIS2010Group1ClassLibrary
 
             command.Parameters.Add("@teacherID", SqlDbType.Int).Value = teacherID;
             command.Parameters.Add("@studentID", SqlDbType.Int).Value = studentID;
+            command.Parameters.Add("@adWeight", SqlDbType.Decimal, 3).Value = adWeight;
 
             SqlParameter parameter = new SqlParameter("@errorMessage", SqlDbType.VarChar, 100);
             parameter.Direction = ParameterDirection.Output;

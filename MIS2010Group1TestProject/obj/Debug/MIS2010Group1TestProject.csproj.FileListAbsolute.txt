@@ -33,3 +33,10 @@ D:\MIS2010Group1 Everything\MIS2010Group1Project\MIS2010Group1TestProject\bin\De
 D:\MIS2010Group1 Everything\MIS2010Group1Project\MIS2010Group1TestProject\obj\Debug\ResolveAssemblyReference.cache
 D:\MIS2010Group1 Everything\MIS2010Group1Project\MIS2010Group1TestProject\obj\Debug\MIS2010Group1TestProject.dll
 D:\MIS2010Group1 Everything\MIS2010Group1Project\MIS2010Group1TestProject\obj\Debug\MIS2010Group1TestProject.pdb
+G:\MIS2010Group1 Everything\MIS2010Group1Project\MIS2010Group1TestProject\bin\Debug\MIS2010Group1TestProject.dll
+G:\MIS2010Group1 Everything\MIS2010Group1Project\MIS2010Group1TestProject\bin\Debug\MIS2010Group1TestProject.pdb
+G:\MIS2010Group1 Everything\MIS2010Group1Project\MIS2010Group1TestProject\bin\Debug\MIS2010Group1ClassLibrary.dll
+G:\MIS2010Group1 Everything\MIS2010Group1Project\MIS2010Group1TestProject\bin\Debug\MIS2010Group1ClassLibrary.pdb
+G:\MIS2010Group1 Everything\MIS2010Group1Project\MIS2010Group1TestProject\obj\Debug\ResolveAssemblyReference.cache
+G:\MIS2010Group1 Everything\MIS2010Group1Project\MIS2010Group1TestProject\obj\Debug\MIS2010Group1TestProject.dll
+G:\MIS2010Group1 Everything\MIS2010Group1Project\MIS2010Group1TestProject\obj\Debug\MIS2010Group1TestProject.pdb
