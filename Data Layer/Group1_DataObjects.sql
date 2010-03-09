@@ -267,7 +267,7 @@ execute procGetAllDemerits;
 
 GO
 
-CREATE PROCEDURE procADtoDemeritList
+alter PROCEDURE procADtoDemeritList
 (
 	@assignedDemeritID int, 
 	@demeritID int,
@@ -293,7 +293,7 @@ BEGIN
 				IF (ERROR_MESSAGE() LIKE '%fkDemeritListToAssignedDemerits%')
 					SET @errorMessage = 'Foreign key violation: Assigned Demerit does not exist';
 				ELSE IF (ERROR_MESSAGE() LIKE '%fkDemeritListToDemerits%')
-					SET @errorMessage = 'Foreign key violation: Demerit does not exist.';
+					SET @errorMessage = 'Foreign key violation: Demerit does not exist';
 			END;	
 	END CATCH;
 
