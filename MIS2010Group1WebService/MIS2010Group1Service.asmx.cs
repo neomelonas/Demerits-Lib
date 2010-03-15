@@ -21,11 +21,6 @@ namespace MIS2010Group1WebService
     {
 
         [WebMethod]
-        public string HelloWorld()
-        {
-            return "Hello World";
-        }
-        [WebMethod]
         public DataSet GetUserList(string @type)
         {
             DataSet userList = DUser.GetUserList(@type);
@@ -49,7 +44,7 @@ namespace MIS2010Group1WebService
             bool success;
             error = "";
 
-            success = Demerits.AddAssignedDemerit(teacherID, studentID, adWeight, out error);
+            success = AssignedDemerits.AddAssignedDemerit(teacherID, studentID, adWeight, out error);
             return success;
         }
         [WebMethod]
@@ -64,13 +59,13 @@ namespace MIS2010Group1WebService
         [WebMethod]
         public DataSet GetDemeritInformation(int demeritID)
         {
-            DataSet demeritInfo = Demerits.GetDemeritInformation(demeritID);
+            DataSet demeritInfo = AssignedDemerits.GetDemeritInformation(demeritID);
             return demeritInfo;
         }
         [WebMethod]
         public DataSet GetStudentDemeritList(int? userID)
         {
-            DataSet studentDemerits = Demerits.GetStudentDemeritList(userID);
+            DataSet studentDemerits = AssignedDemerits.GetStudentDemeritList(userID);
             return studentDemerits;
         }
         [WebMethod]

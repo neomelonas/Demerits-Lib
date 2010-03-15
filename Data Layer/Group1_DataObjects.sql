@@ -267,7 +267,7 @@ execute procGetAllDemerits;
 
 GO
 
-alter PROCEDURE procADtoDemeritList
+CREATE PROCEDURE procADtoDemeritList
 (
 	@assignedDemeritID int, 
 	@demeritID int,

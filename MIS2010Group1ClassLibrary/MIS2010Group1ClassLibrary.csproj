@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssignedDemerits.cs" />
     <Compile Include="Comments.cs" />
     <Compile Include="DataServices.cs" />
     <Compile Include="Demerits.cs" />

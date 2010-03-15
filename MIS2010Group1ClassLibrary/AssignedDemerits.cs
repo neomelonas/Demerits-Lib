@@ -1,5 +1,4 @@
-﻿using MIS2010Group1ClassLibrary;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,27 +7,45 @@ using System.Data.SqlClient;
 
 namespace MIS2010Group1ClassLibrary
 {
-    public class Demerits
+    public class AssignedDemerits
     {
-        public static DataSet GetAllDemerits()
+        public static DataSet GetStudentDemeritList(int? userID)
         {
             //Establish DBconn
             SqlConnection connection = DataServices.SetDatabaseConnection();
 
             //What DLO to use
-            SqlCommand command = new SqlCommand("procGetAllDemerits", connection);
+            SqlCommand command = new SqlCommand("procGetStudentDemeritList", connection);
             command.CommandType = CommandType.StoredProcedure;
+
+            command.Parameters.Add("@userID", SqlDbType.Int).Value = userID;
 
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataSet dataSet = new DataSet();
             adapter.Fill(dataSet);
 
             connection.Close();
-
             return dataSet;
         }
+        public static DataSet GetDemeritInformation(int demeritID)
+        {
+            //Establish DBconn
+            SqlConnection connection = DataServices.SetDatabaseConnection();
 
-        public static bool ADtoDemeritList(int adID, int demeritID, out string error)
+            //What DLO to use
+            SqlCommand command = new SqlCommand("procGetDemeritInformation", connection);
+            command.CommandType = CommandType.StoredProcedure;
+
+            command.Parameters.Add("@demeritID", SqlDbType.Int).Value = demeritID;
+
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataSet dataSet = new DataSet();
+            adapter.Fill(dataSet);
+
+            connection.Close();
+            return dataSet;
+        }
+        public static bool AddAssignedDemerit(int teacherID, int studentID, double adWeight, out string error)
         {
             bool success = false;
             error = "none";
@@ -37,11 +54,12 @@ namespace MIS2010Group1ClassLibrary
             SqlConnection connection = DataServices.SetDatabaseConnection();
 
             //What DLO to use
-            SqlCommand command = new SqlCommand("procADtoDemeritList", connection);
+            SqlCommand command = new SqlCommand("procAddAssignedDemerit", connection);
             command.CommandType = CommandType.StoredProcedure;
 
-            command.Parameters.Add("@assignedDemeritID", SqlDbType.Int).Value = adID;
-            command.Parameters.Add("@demeritID", SqlDbType.Int).Value = demeritID;
+            command.Parameters.Add("@teacherID", SqlDbType.Int).Value = teacherID;
+            command.Parameters.Add("@studentID", SqlDbType.Int).Value = studentID;
+            command.Parameters.Add("@adWeight", SqlDbType.Decimal, 3).Value = adWeight;
 
             SqlParameter parameter = new SqlParameter("@errorMessage", SqlDbType.VarChar, 100);
             parameter.Direction = ParameterDirection.Output;
@@ -59,8 +77,7 @@ namespace MIS2010Group1ClassLibrary
             connection.Close();
             return success;
         }
-
-        public static bool RemoveAssignedDemerit(int? teacherID, int? studentID, int? assignedDemeritID)
+        public static bool ADTestCleanup()
         {
             bool success;
 
@@ -68,39 +85,8 @@ namespace MIS2010Group1ClassLibrary
             SqlConnection connection = DataServices.SetDatabaseConnection();
 
             //What DLO to use
-            SqlCommand command = new SqlCommand("procDeleteAssignedDemerit", connection);
+            SqlCommand command = new SqlCommand("procADTestCleanup", connection);
             command.CommandType = CommandType.StoredProcedure;
-
-            command.Parameters.Add("@teacherID", SqlDbType.Int).Value = teacherID;
-            command.Parameters.Add("@studentID", SqlDbType.Int).Value = studentID;
-            command.Parameters.Add("@assignedDemeritID", SqlDbType.Int).Value = assignedDemeritID;
-
-            SqlParameter parameter = new SqlParameter("@success", SqlDbType.Bit);
-            parameter.Direction = ParameterDirection.ReturnValue;
-            command.Parameters.Add(parameter);
-
-            command.ExecuteNonQuery();
-
-            success = Convert.ToBoolean(command.Parameters["@success"].Value);
-
-            connection.Close();
-
-            return success;
-        }
-
-        public static bool DeleteFromDemeritList(int demeritID, int assignedDemeritID)
-        {
-            bool success;
-
-            //Establish DBconn
-            SqlConnection connection = DataServices.SetDatabaseConnection();
-
-            //What DLO to use
-            SqlCommand command = new SqlCommand("procDeleteFromDemeritList", connection);
-            command.CommandType = CommandType.StoredProcedure;
-
-            command.Parameters.Add("@demeritID", SqlDbType.Int).Value = demeritID;
-            command.Parameters.Add("@assignedDemeritID", SqlDbType.Int).Value = assignedDemeritID;
 
             SqlParameter parameter = new SqlParameter("@success", SqlDbType.Bit);
             parameter.Direction = ParameterDirection.ReturnValue;

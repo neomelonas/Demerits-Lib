@@ -123,10 +123,10 @@ namespace MIS2010Group1TestProject
             Assert.AreEqual(errorExpected, error, "THERE WAS AN ERROR with Linked Comments");
             Assert.AreEqual(expected, actual, "Linked Comment test unsuccessful");
         }
-        //[TestCleanup()]
-        //public void CommentsTestCleanup()
-        //{
-        //    Comments.CommentsTestCleanup();
-        //}
+        [TestCleanup()]
+        public void CommentsTestCleanup()
+        {
+            Comments.CommentsTestCleanup();
+        }
     }
 }

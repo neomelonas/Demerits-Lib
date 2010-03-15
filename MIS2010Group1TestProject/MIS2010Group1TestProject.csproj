@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssignedDemeritsTest.cs" />
     <Compile Include="CommentsTest.cs" />
     <Compile Include="DemeritsTest.cs" />
     <Compile Include="DetentionTest.cs" />
