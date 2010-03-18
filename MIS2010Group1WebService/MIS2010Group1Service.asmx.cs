@@ -39,12 +39,12 @@ namespace MIS2010Group1WebService
             return allDemerits;
         }
         [WebMethod]
-        public bool AddAssignedDemerit(int teacherID, int studentID, double adWeight, out string error)
+        public bool AddAssignedDemerit(int teacherID, int studentID, double adWeight, out string error, out int adID)
         {
             bool success;
             error = "";
 
-            success = AssignedDemerits.AddAssignedDemerit(teacherID, studentID, adWeight, out error);
+            success = AssignedDemerits.AddAssignedDemerit(teacherID, studentID, adWeight, out error, out adID);
             return success;
         }
         [WebMethod]
@@ -69,9 +69,9 @@ namespace MIS2010Group1WebService
             return studentDemerits;
         }
         [WebMethod]
-        public bool RemoveAssignedDemerit(int? teacherID, int? studentID, int? assignedDemeritID)
+        public bool RemoveAssignedDemerit(int assignedDemeritID)
         {
-            bool success = Demerits.RemoveAssignedDemerit(teacherID, studentID, assignedDemeritID);
+            bool success = AssignedDemerits.RemoveAssignedDemerit(assignedDemeritID);
             return success;
         }
         [WebMethod]

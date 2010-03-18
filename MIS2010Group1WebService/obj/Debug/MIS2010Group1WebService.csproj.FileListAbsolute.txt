@@ -45,3 +45,10 @@ F:\MIS2010Group1 Everything\MIS2010Group1Project\MIS2010Group1WebService\bin\MIS
 F:\MIS2010Group1 Everything\MIS2010Group1Project\MIS2010Group1WebService\obj\Debug\ResolveAssemblyReference.cache
 F:\MIS2010Group1 Everything\MIS2010Group1Project\MIS2010Group1WebService\obj\Debug\MIS2010Group1WebService.dll
 F:\MIS2010Group1 Everything\MIS2010Group1Project\MIS2010Group1WebService\obj\Debug\MIS2010Group1WebService.pdb
+D:\MIS2010Group1\MIS2010Group1Project\MIS2010Group1WebService\bin\MIS2010Group1WebService.dll
+D:\MIS2010Group1\MIS2010Group1Project\MIS2010Group1WebService\bin\MIS2010Group1WebService.pdb
+D:\MIS2010Group1\MIS2010Group1Project\MIS2010Group1WebService\bin\MIS2010Group1ClassLibrary.dll
+D:\MIS2010Group1\MIS2010Group1Project\MIS2010Group1WebService\bin\MIS2010Group1ClassLibrary.pdb
+D:\MIS2010Group1\MIS2010Group1Project\MIS2010Group1WebService\obj\Debug\ResolveAssemblyReference.cache
+D:\MIS2010Group1\MIS2010Group1Project\MIS2010Group1WebService\obj\Debug\MIS2010Group1WebService.dll
+D:\MIS2010Group1\MIS2010Group1Project\MIS2010Group1WebService\obj\Debug\MIS2010Group1WebService.pdb

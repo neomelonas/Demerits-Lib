@@ -33,3 +33,13 @@ F:\MIS2010Group1 Everything\MIS2010Group1Project\MIS2010Group1ClassLibrary\bin\D
 F:\MIS2010Group1 Everything\MIS2010Group1Project\MIS2010Group1ClassLibrary\obj\Debug\ResolveAssemblyReference.cache
 F:\MIS2010Group1 Everything\MIS2010Group1Project\MIS2010Group1ClassLibrary\obj\Debug\MIS2010Group1ClassLibrary.dll
 F:\MIS2010Group1 Everything\MIS2010Group1Project\MIS2010Group1ClassLibrary\obj\Debug\MIS2010Group1ClassLibrary.pdb
+D:\MIS2010Group1\MIS2010Group1Project\MIS2010Group1ClassLibrary\bin\Debug\MIS2010Group1ClassLibrary.dll
+D:\MIS2010Group1\MIS2010Group1Project\MIS2010Group1ClassLibrary\bin\Debug\MIS2010Group1ClassLibrary.pdb
+D:\MIS2010Group1\MIS2010Group1Project\MIS2010Group1ClassLibrary\obj\Debug\ResolveAssemblyReference.cache
+D:\MIS2010Group1\MIS2010Group1Project\MIS2010Group1ClassLibrary\obj\Debug\MIS2010Group1ClassLibrary.dll
+D:\MIS2010Group1\MIS2010Group1Project\MIS2010Group1ClassLibrary\obj\Debug\MIS2010Group1ClassLibrary.pdb
+G:\MIS2010Group1\MIS2010Group1Project\MIS2010Group1ClassLibrary\bin\Debug\MIS2010Group1ClassLibrary.dll
+G:\MIS2010Group1\MIS2010Group1Project\MIS2010Group1ClassLibrary\bin\Debug\MIS2010Group1ClassLibrary.pdb
+G:\MIS2010Group1\MIS2010Group1Project\MIS2010Group1ClassLibrary\obj\Debug\ResolveAssemblyReference.cache
+G:\MIS2010Group1\MIS2010Group1Project\MIS2010Group1ClassLibrary\obj\Debug\MIS2010Group1ClassLibrary.dll
+G:\MIS2010Group1\MIS2010Group1Project\MIS2010Group1ClassLibrary\obj\Debug\MIS2010Group1ClassLibrary.pdb

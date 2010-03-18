@@ -5,7 +5,6 @@ use MIS2010Group1
 If you need to re-create the database, drop tables in the 
 following order, or else superbreaking happens.
 
---drop table StudentDemeritDetention;
 drop table StudentDetention;
 drop table Detention;
 drop table Comments;

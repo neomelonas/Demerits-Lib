@@ -45,10 +45,11 @@ namespace MIS2010Group1ClassLibrary
             connection.Close();
             return dataSet;
         }
-        public static bool AddAssignedDemerit(int teacherID, int studentID, double adWeight, out string error)
+        public static bool AddAssignedDemerit(int teacherID, int studentID, double adWeight, out string error, out int adID)
         {
             bool success = false;
             error = "none";
+            adID = 0;
 
             //Establish DBconn
             SqlConnection connection = DataServices.SetDatabaseConnection();
@@ -65,6 +66,10 @@ namespace MIS2010Group1ClassLibrary
             parameter.Direction = ParameterDirection.Output;
             command.Parameters.Add(parameter);
 
+            parameter = new SqlParameter("@adID", SqlDbType.Int);
+            parameter.Direction = ParameterDirection.Output;
+            command.Parameters.Add(parameter);
+
             parameter = new SqlParameter("@success", SqlDbType.Bit);
             parameter.Direction = ParameterDirection.ReturnValue;
             command.Parameters.Add(parameter);
@@ -73,10 +78,37 @@ namespace MIS2010Group1ClassLibrary
 
             success = Convert.ToBoolean(command.Parameters["@success"].Value);
             error = Convert.ToString(command.Parameters["@errorMessage"].Value);
+            adID = Convert.ToInt32(command.Parameters["@adID"].Value);
 
             connection.Close();
             return success;
         }
+
+        public static bool RemoveAssignedDemerit(int assignedDemeritID)
+        {
+            bool success;
+
+            //Establish DBconn
+            SqlConnection connection = DataServices.SetDatabaseConnection();
+
+            //What DLO to use
+            SqlCommand command = new SqlCommand("procRemoveAssignedDemerit", connection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@assignedDemeritID", SqlDbType.Int).Value = assignedDemeritID;
+
+            SqlParameter parameter = new SqlParameter("@success", SqlDbType.Bit);
+            parameter.Direction = ParameterDirection.ReturnValue;
+            command.Parameters.Add(parameter);
+
+            command.ExecuteNonQuery();
+
+            success = Convert.ToBoolean(command.Parameters["@success"].Value);
+
+            connection.Close();
+
+            return success;
+        }
+
         public static bool ADTestCleanup()
         {
             bool success;

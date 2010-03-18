@@ -14,7 +14,7 @@ namespace MIS2010Group1TestProject
     [TestClass()]
     public class AssignedDemeritsTest
     {
-
+        int adID;
 
         private TestContext testContextInstance;
 
@@ -109,24 +109,29 @@ namespace MIS2010Group1TestProject
         ///A test for AddAssignedDemerit
         ///</summary>
         [TestMethod()]
-        public void AddAssignedDemeritTest()
+        public void AddAndRemoveAssignedDemeritTest()
         {
             int teacherID = 10;
             int studentID = 1;
             double weight = 0.5;
             string error = null;
+            int adID = 0;
             string errorExpected = "None";
             bool expected = true;
             bool actual;
-            actual = AssignedDemerits.AddAssignedDemerit(teacherID, studentID, weight, out error);
-            Assert.AreEqual(errorExpected, error, "Insert failed.");
+            bool actualRemove;
+            actual = AssignedDemerits.AddAssignedDemerit(teacherID, studentID, weight, out error, out adID);
+            this.adID = adID;
+            Assert.AreEqual(errorExpected, error, "Insert failed, errorMessage discontinuity.");
             Assert.AreEqual(expected, actual, "Insert failed.");
+            actualRemove = AssignedDemerits.RemoveAssignedDemerit(this.adID);
+            Assert.AreEqual(expected, actualRemove, "AHHHH UNEXPECTED FAILURE!");
 
+            
             teacherID = 1;
-            studentID = 1;
             expected = false;
             errorExpected = "Foreign key violation: Teacher does not exist";
-            actual = AssignedDemerits.AddAssignedDemerit(teacherID, studentID, weight, out error);
+            actual = AssignedDemerits.AddAssignedDemerit(teacherID, studentID, weight, out error, out adID);
             Assert.AreEqual(errorExpected, error, "Error was something different! Or, it worked!");
             Assert.AreEqual(expected, actual, "Insert succeeded when Teacher was wrong.");
 
@@ -134,14 +139,14 @@ namespace MIS2010Group1TestProject
             studentID = 10;
             expected = false;
             errorExpected = "Foreign key violation: Student does not exist";
-            actual = AssignedDemerits.AddAssignedDemerit(teacherID, studentID, weight, out error);
+            actual = AssignedDemerits.AddAssignedDemerit(teacherID, studentID, weight, out error, out adID);
             Assert.AreEqual(errorExpected, error, "Error was something different! Or, it worked!");
             Assert.AreEqual(expected, actual, "Insert succeeded when student was wrong.");
         }
-        [TestCleanup()]
-        public void ADTestCleanup()
-        {
-            AssignedDemerits.ADTestCleanup();
-        }
+        //[TestCleanup()]
+        //public void ADTestCleanup()
+        //{
+        //    AssignedDemerits.ADTestCleanup();
+        //}
     }
 }

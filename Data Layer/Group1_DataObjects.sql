@@ -21,6 +21,7 @@ DROP FUNCTION fn_IsWeekDay;
 DROP FUNCTION fnGetBadStudents;
 DROP TRIGGER trgAddDetention;
 DROP TRIGGER trgAddStudentDetention;
+DROP PROCEDURE procRemoveAssignedDemerit;
 */
 
 CREATE FUNCTION fnUserList
@@ -338,20 +339,19 @@ CREATE PROCEDURE procAddAssignedDemerit
     @teacherID int,
     @studentID int,
     @adWeight decimal(3,2),
-    @errorMessage varchar(100) output
+    @errorMessage varchar(100) output,
+    @adID int output
 )
 AS BEGIN
 	DECLARE @successfullinsert bit;
-   
+	SET @adID = 0;
 	SET @successfullinsert = 1;
 	SET @errorMessage = 'None';
-	
 	BEGIN TRY
 		INSERT INTO AssignedDemerits (teacherID, studentID, adTimestamp, assignedDemeritWeight) VALUES (@teacherID, @studentID, CURRENT_TIMESTAMP, @adWeight)
 	END TRY 
 
 	BEGIN CATCH
-
 		SET @successfullinsert = 0;
 		IF(Error_Message() like '%Primary key%')
 			BEGIN
@@ -378,19 +378,19 @@ AS BEGIN
 			END
 	END CATCH;
 	
-
-
+	SELECT @adID=assignedDemeritID FROM AssignedDemerits WHERE adTimestamp LIKE CONVERT(datetime, CURRENT_TIMESTAMP);
+	
+	RETURN @adID
 	RETURN @successfullinsert;
 	--Written by: Tommy (insert) & Ryan (error handling)
 END;
 
 /*
-select * from AssignedDemerits
-declare @successfullinsert bit, @errorMessages varchar(100);
-
-execute @successfullinsert = procAddAssignedDemerit @teacherID=3, @studentID=1,@adWeight=1, @errorMessage = @errorMessages output;
+declare @successfullinsert bit, @errorMessages varchar(100), @adID int;
+execute @successfullinsert = procAddAssignedDemerit @teacherID=3, @studentID=1,@adWeight=1, @errorMessage = @errorMessages output, @adID=@adID output;
 print @successfullinsert;
 print @errorMessages;
+print @adID;
 */
 
 GO
@@ -612,3 +612,34 @@ AS BEGIN
 		INSERT INTO StudentDetention values (@studentID, @detentionID, 0);
 	END
 END;
+
+GO
+
+CREATE PROCEDURE procRemoveAssignedDemerit
+(
+	@assignedDemeritID int
+)
+AS BEGIN
+	DECLARE @success bit;
+	SET @success = 1;
+
+	DELETE FROM DemeritList
+	WHERE assignedDemeritID=@assignedDemeritID;
+		
+	DELETE FROM AssignedDemerits
+	WHERE assignedDemeritID=@assignedDemeritID;
+
+	IF (@@ROWCOUNT = 0)
+	BEGIN SET @success = 0; END
+	RETURN @success
+	--Written by: Neo
+END;
+
+/*
+declare @successfullinsert bit, @errorMessages varchar(100), @adID int;
+execute @successfullinsert = procAddAssignedDemerit @teacherID=3, @studentID=1,@adWeight=1, @errorMessage = @errorMessages output, @adID=@adID output;
+DECLARE @success bit;
+EXECUTE @success = procRemoveAssignedDemerits @assignedDemeritID=@adID;
+PRINT @success;
+*/
+

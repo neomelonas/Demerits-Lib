@@ -148,14 +148,6 @@ insert into StudentDetention (studentID, detentionID) values
 insert into StudentDetention (studentID, detentionID, served) values
 (7,5,1);
 
--- StudentDemeritDetention Data
---insert into StudentDemeritDetention (studentID, assignedDemeritID, detentionID) values 
---(1, 105, 1),
---(2, 107, 1),
---(7, 106, 2),
---(4, 104, 4),
---(4, 103, 5);
-
 -- Comments Data
 insert into Comments (commentDesc, assignedDemeritID, commentTimestamp, userID, commentLink) values
 ('This is unfair!', 104, '11/11/09 13:00', 1, null),
